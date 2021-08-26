@@ -31,6 +31,11 @@ cd <путь до папки>
 
 (Если получите сообщение: WARNING: You are using pip version 20.2.3; however, version 21.2.1 is available. You should consider upgrading via the '..... flask/venv/bin/python3 -m pip install --upgrade pip' command.)
 
+Создайте БД с помощью команд Python 
+
+from app import db
+db.create_all()
+
 Запустите проект через консоль
 
 flask run
