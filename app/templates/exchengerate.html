@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Курс валют на заданную дату</title>
+</head>
+<body>
+   <h1> Курсы валют для украинской гривны за {{users_data}}</h1>
+   <hr>
+   <form action="/" >
+        <input type="submit" value="Вернуться на главную страницу">
+   </form>
+   <hr>
+    {% block content %}
+        {% for elem, value in exchengerate_dict.items() %}
+            {{elem}} : {{value}}<br>
+        {% endfor %}
+    {% endblock %}
+<h3> {{ massage }}</h3>
+</body>
+</html>

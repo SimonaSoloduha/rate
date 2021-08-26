@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Информация за период</title>
+</head>
+<body>
+   <h1>Курсы валют для украинской гривны за заданный период с {{users_data_start}} по {{users_data_end}} </h1>
+   <hr>
+   <form action="/" >
+        <input type="submit" value="Вернуться на главную страницу">
+   </form>
+   <hr>
+    {% block content %}
+        {% for elem in result %}
+            Дата: {{elem.date}}<br>
+            {% for name, kurs  in elem.info.items() %}
+                {{ name }}: {{ kurs }} <br>
+            {% endfor %}
+            <hr>
+        {% endfor %}
+    {% endblock %}
+
+</body>
+</html>

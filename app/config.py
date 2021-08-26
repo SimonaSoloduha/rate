@@ -1,0 +1,1 @@
+url_privat = 'https://api.privatbank.ua/p24api/exchange_rates?json&date=23.08.2021'

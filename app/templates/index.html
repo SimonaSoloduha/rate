@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Здесь вы можете узнать информацию о курсах валют на выбранную дату. Архив хранит данные за последние 4 года</title>
+</head>
+<body>
+<h1 align="center" style="color:#0000ff">Здесь вы можете узнать информацию о курсах валют на выбранную дату. Архив хранит данные за последние 4 года</h1>
+
+<form align="center" action="/exchengerate_info/" method="POST">
+    <h3>Узнать курс валют на конкретную дату </h3>
+    <input type="date" id="users_data" name="users_data" class="form-control"
+        format="dd.mm.yyyy" placeholder="dd.mm.yyyy">
+    <input type="submit" value="Узнать">
+</form>
+{% if message %}
+<h3 align="center" style="color:#ff0000">{{message}}</h3>
+{% endif %}
+
+<br>
+<hr>
+
+<form align="center" action="/exchengerate_info_for_dates/" method="POST">
+    <h3>Узнать курс валют за период </h3>
+
+    <input type="date" id="users_data_start" name="users_data_start" class="form-control"
+        format="dd.mm.yyyy" placeholder="dd.mm.yyyy">
+    <input type="date" id="users_data_end" name="users_data_end" class="form-control"
+        format="dd.mm.yyyy" placeholder="dd.mm.yyyy">
+    <br><br><br>
+    <p>Вы можете выбрать конкретные валюты. Если хотите узнать курс всех валют - не ставьте галочки</p>
+    <input type="checkbox" name="AZN"/>AZN&nbsp;&nbsp;
+    <input type="checkbox" name="BYN"/>BYN&nbsp;&nbsp;
+    <input type="checkbox" name="CAD"/>CAD&nbsp;&nbsp;
+    <input type="checkbox" name="CHF"/>CHF&nbsp;&nbsp;
+    <input type="checkbox" name="CNY"/>CNY&nbsp;&nbsp;
+    <input type="checkbox" name="CZK"/>CZK&nbsp;&nbsp;
+    <input type="checkbox" name="DKK"/>DKK&nbsp;&nbsp;
+    <input type="checkbox" name="EUR"/>EUR&nbsp;&nbsp;
+    <input type="checkbox" name="GBP"/>GBP&nbsp;&nbsp;
+    <input type="checkbox" name="GEL"/>GEL<br>
+    <input type="checkbox" name="HUF"/>HUF&nbsp;&nbsp;
+    <input type="checkbox" name="ILS"/>ILS&nbsp;&nbsp;
+    <input type="checkbox" name="JPY"/>JPY&nbsp;&nbsp;
+    <input type="checkbox" name="KZT"/>KZT&nbsp;&nbsp;
+    <input type="checkbox" name="MDL"/>MDL&nbsp;&nbsp;
+    <input type="checkbox" name="NOK"/>NOK&nbsp;&nbsp;
+    <input type="checkbox" name="PLZ"/>PLZ&nbsp;&nbsp;
+    <input type="checkbox" name="RUB"/>RUB&nbsp;&nbsp;
+    <input type="checkbox" name="SEK"/>SEK&nbsp;&nbsp;
+    <input type="checkbox" name="SGD"/>SGD<br>
+    <input type="checkbox" name="TMT"/>TMT&nbsp;&nbsp;
+    <input type="checkbox" name="TRY"/>TRY&nbsp;&nbsp;
+    <input type="checkbox" name="UAH"/>UAH&nbsp;&nbsp;
+    <input type="checkbox" name="USD"/>USD&nbsp;&nbsp;
+    <input type="checkbox" name="UZS"/><br>
+    <input align="center" style="vertical-align:middle" type="submit" value="Узнать">
+
+</form>
+
+<hr>
+
+<br>
+
+</body>
+</html>
